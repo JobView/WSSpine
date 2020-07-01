@@ -1,0 +1,4163 @@
+{
+  "skeleton": {
+    "hash": "8yLWlZ0nQ6w3Zunx1VzDYQrEQf8",
+    "spine": "3.8.95",
+    "x": -229.2,
+    "y": -0.23,
+    "width": 458,
+    "height": 1275.23,
+    "images": "E:\\动态人物\\mumu\\mumu换装720\\mumu1\\images",
+    "audio": "E:\\动态人物\\mumu\\mumu换装720\\mumu1\\images"
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "zong",
+      "parent": "root"
+    },
+    {
+      "name": "zong2",
+      "parent": "zong",
+      "x": -5.4,
+      "y": 688.29
+    },
+    {
+      "name": "datui2",
+      "parent": "zong2",
+      "length": 327.34,
+      "rotation": -86.91,
+      "x": -59.9,
+      "y": 38.32
+    },
+    {
+      "name": "xiaotui2",
+      "parent": "datui2",
+      "length": 289.27,
+      "rotation": -0.59,
+      "x": 323.62,
+      "y": 1.46
+    },
+    {
+      "name": "jiao2",
+      "parent": "xiaotui2",
+      "length": 111.24,
+      "rotation": 0.75,
+      "x": 284.18,
+      "y": -1.04
+    },
+    {
+      "name": "xie2",
+      "parent": "jiao2",
+      "x": 106.94,
+      "y": -0.07
+    },
+    {
+      "name": "wa2",
+      "parent": "xiaotui2",
+      "x": 203.98,
+      "y": 8.47
+    },
+    {
+      "name": "datui1",
+      "parent": "zong2",
+      "length": 331.31,
+      "rotation": -92.39,
+      "x": 60.24,
+      "y": 33.47
+    },
+    {
+      "name": "xiaotui1",
+      "parent": "datui1",
+      "length": 280.01,
+      "rotation": 0.48,
+      "x": 328.05,
+      "y": -0.13
+    },
+    {
+      "name": "jiao1",
+      "parent": "xiaotui1",
+      "length": 91.58,
+      "rotation": -0.94,
+      "x": 278.89,
+      "y": 1.05
+    },
+    {
+      "name": "xie1",
+      "parent": "jiao1",
+      "x": 101.42,
+      "y": -0.62
+    },
+    {
+      "name": "wa1",
+      "parent": "xiaotui1",
+      "x": 191.02,
+      "y": -11.49
+    },
+    {
+      "name": "yinying2",
+      "parent": "datui2",
+      "x": 209.23,
+      "y": 12.06
+    },
+    {
+      "name": "yinying1",
+      "parent": "datui1",
+      "x": 203.3,
+      "y": -12.96
+    },
+    {
+      "name": "duzi",
+      "parent": "zong2",
+      "length": 200.45,
+      "rotation": 88.44,
+      "x": -0.58,
+      "y": 34.01
+    },
+    {
+      "name": "shenti",
+      "parent": "duzi",
+      "length": 167.71,
+      "rotation": 1.18,
+      "x": 205.86,
+      "y": 1.24
+    },
+    {
+      "name": "lian",
+      "parent": "shenti",
+      "length": 147.05,
+      "rotation": 1.65,
+      "x": 167.7,
+      "y": 1.09
+    },
+    {
+      "name": "dabi2",
+      "parent": "shenti",
+      "length": 193.34,
+      "rotation": 167.04,
+      "x": 110.51,
+      "y": 87.84
+    },
+    {
+      "name": "xiaobi2",
+      "parent": "dabi2",
+      "length": 140.85,
+      "rotation": -4.68,
+      "x": 189.63,
+      "y": -2.06
+    },
+    {
+      "name": "shou2",
+      "parent": "xiaobi2",
+      "length": 65.58,
+      "rotation": -17.52,
+      "x": 147.04,
+      "y": -1.42
+    },
+    {
+      "name": "dabi1",
+      "parent": "shenti",
+      "length": 203.54,
+      "rotation": -161.87,
+      "x": 115.95,
+      "y": -78.75
+    },
+    {
+      "name": "xiaobi1",
+      "parent": "dabi1",
+      "length": 143.96,
+      "rotation": -0.14,
+      "x": 200.8,
+      "y": -1.41
+    },
+    {
+      "name": "shou1",
+      "parent": "xiaobi1",
+      "length": 70.78,
+      "rotation": 19.26,
+      "x": 142.64,
+      "y": -4.15
+    },
+    {
+      "name": "neiku",
+      "parent": "zong2",
+      "x": 18.72,
+      "y": 40.97
+    },
+    {
+      "name": "neiyi",
+      "parent": "zong2",
+      "x": 38.74,
+      "y": 240.17
+    },
+    {
+      "name": "xiu2",
+      "parent": "dabi2",
+      "x": 74.53,
+      "y": -23.31
+    }
+  ],
+  "slots": [
+    {
+      "name": "feixiu2",
+      "bone": "zong"
+    },
+    {
+      "name": "feixiu1",
+      "bone": "zong"
+    },
+    {
+      "name": "shou2",
+      "bone": "shou2",
+      "attachment": "shou2"
+    },
+    {
+      "name": "xiaobi2",
+      "bone": "xiaobi2",
+      "attachment": "xiaobi2"
+    },
+    {
+      "name": "dabi2",
+      "bone": "dabi2",
+      "attachment": "dabi2"
+    },
+    {
+      "name": "shou1",
+      "bone": "shou1",
+      "attachment": "shou1"
+    },
+    {
+      "name": "xiaobi1",
+      "bone": "xiaobi1",
+      "attachment": "xiaobi1"
+    },
+    {
+      "name": "dabi1",
+      "bone": "dabi1",
+      "attachment": "dabi1"
+    },
+    {
+      "name": "houzhaoqun",
+      "bone": "zong",
+      "attachment": "houzhaoqun"
+    },
+    {
+      "name": "houfa1",
+      "bone": "zong",
+      "attachment": "houfa1"
+    },
+    {
+      "name": "hudiejie1",
+      "bone": "zong",
+      "attachment": "hudiejie1"
+    },
+    {
+      "name": "jiao2",
+      "bone": "jiao2",
+      "attachment": "jiao2"
+    },
+    {
+      "name": "xiaotui2",
+      "bone": "xiaotui2",
+      "attachment": "xiaotui2"
+    },
+    {
+      "name": "datui2",
+      "bone": "datui2",
+      "attachment": "datui2"
+    },
+    {
+      "name": "yinying2",
+      "bone": "yinying2",
+      "attachment": "xiuxianqun/tuiyinying2"
+    },
+    {
+      "name": "wa2",
+      "bone": "wa2",
+      "attachment": "wa2"
+    },
+    {
+      "name": "xie2",
+      "bone": "xie2",
+      "attachment": "xie2"
+    },
+    {
+      "name": "jiao1",
+      "bone": "jiao1",
+      "attachment": "jiao1"
+    },
+    {
+      "name": "xiaotui1",
+      "bone": "xiaotui1",
+      "attachment": "xiaotui1"
+    },
+    {
+      "name": "datui1",
+      "bone": "datui1",
+      "attachment": "datui1"
+    },
+    {
+      "name": "yinying1",
+      "bone": "yinying1",
+      "attachment": "xiuxianqun/tuiyinying1"
+    },
+    {
+      "name": "wa1",
+      "bone": "wa1",
+      "attachment": "wa1"
+    },
+    {
+      "name": "xie1",
+      "bone": "xie1",
+      "attachment": "xie1"
+    },
+    {
+      "name": "duzi",
+      "bone": "duzi",
+      "attachment": "duzi"
+    },
+    {
+      "name": "shenti",
+      "bone": "shenti",
+      "attachment": "shenti"
+    },
+    {
+      "name": "xiu2",
+      "bone": "xiu2",
+      "attachment": "xiu2"
+    },
+    {
+      "name": "xiu1",
+      "bone": "zong",
+      "attachment": "xiu1"
+    },
+    {
+      "name": "neiku",
+      "bone": "neiku",
+      "attachment": "neiku"
+    },
+    {
+      "name": "neiyi",
+      "bone": "neiyi",
+      "attachment": "neiyi"
+    },
+    {
+      "name": "huabian",
+      "bone": "zong",
+      "attachment": "huabian"
+    },
+    {
+      "name": "neiqun",
+      "bone": "zong",
+      "attachment": "neiqun"
+    },
+    {
+      "name": "zhaoqun2",
+      "bone": "zong",
+      "attachment": "zhaoqun2"
+    },
+    {
+      "name": "zhaoqun1",
+      "bone": "zong",
+      "attachment": "zhaoqun1"
+    },
+    {
+      "name": "shangyi",
+      "bone": "zong",
+      "attachment": "shangyi"
+    },
+    {
+      "name": "jinshi",
+      "bone": "zong",
+      "attachment": "jinshi"
+    },
+    {
+      "name": "houfa2",
+      "bone": "zong",
+      "attachment": "houfa2"
+    },
+    {
+      "name": "hudiejie2",
+      "bone": "zong",
+      "attachment": "hudiejie2"
+    },
+    {
+      "name": "yanbai2",
+      "bone": "zong",
+      "attachment": "yanbai2"
+    },
+    {
+      "name": "yanzhu2",
+      "bone": "zong",
+      "attachment": "yanzhu2"
+    },
+    {
+      "name": "gaoguang2",
+      "bone": "zong",
+      "attachment": "gaoguang2"
+    },
+    {
+      "name": "yanbai1",
+      "bone": "zong",
+      "attachment": "yanbai1"
+    },
+    {
+      "name": "yanzhu1",
+      "bone": "zong",
+      "attachment": "yanzhu1"
+    },
+    {
+      "name": "gaoguang1",
+      "bone": "zong",
+      "attachment": "gaoguang1"
+    },
+    {
+      "name": "lian",
+      "bone": "lian",
+      "attachment": "lian"
+    },
+    {
+      "name": "xiajiemao2",
+      "bone": "zong",
+      "attachment": "xiajiemao2"
+    },
+    {
+      "name": "shangyanpi2",
+      "bone": "zong",
+      "attachment": "shangyanpi2"
+    },
+    {
+      "name": "shangjiemao2",
+      "bone": "zong",
+      "attachment": "shangjiemao2"
+    },
+    {
+      "name": "shuangyanpi2",
+      "bone": "zong",
+      "attachment": "shuangyanpi2"
+    },
+    {
+      "name": "xiajiemao1",
+      "bone": "zong",
+      "attachment": "xiajiemao1"
+    },
+    {
+      "name": "shangyanpi1",
+      "bone": "zong",
+      "attachment": "shangyanpi1"
+    },
+    {
+      "name": "shangjiemao1",
+      "bone": "zong",
+      "attachment": "shangjiemao1"
+    },
+    {
+      "name": "shuangyanpi1",
+      "bone": "zong",
+      "attachment": "shuangyanpi1"
+    },
+    {
+      "name": "zuinei",
+      "bone": "zong",
+      "attachment": "zuinei"
+    },
+    {
+      "name": "xiachun",
+      "bone": "zong",
+      "attachment": "xiachun"
+    },
+    {
+      "name": "shangchun",
+      "bone": "zong",
+      "attachment": "shangchun"
+    },
+    {
+      "name": "bizi",
+      "bone": "zong",
+      "attachment": "bizi"
+    },
+    {
+      "name": "dingfa",
+      "bone": "zong",
+      "attachment": "dingfa"
+    },
+    {
+      "name": "er2",
+      "bone": "zong",
+      "attachment": "er2"
+    },
+    {
+      "name": "er1",
+      "bone": "zong",
+      "attachment": "er1"
+    },
+    {
+      "name": "liuhai",
+      "bone": "zong",
+      "attachment": "liuhai"
+    },
+    {
+      "name": "qianfa2",
+      "bone": "zong",
+      "attachment": "qianfa2"
+    },
+    {
+      "name": "qianfa1",
+      "bone": "zong",
+      "attachment": "qianfa1"
+    },
+    {
+      "name": "mei2",
+      "bone": "zong",
+      "attachment": "mei2"
+    },
+    {
+      "name": "mei1",
+      "bone": "zong",
+      "attachment": "mei1"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "bizi": {
+          "bizi": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              1.8,
+              1142,
+              -3.2,
+              1142,
+              -3.2,
+              1155,
+              1.8,
+              1155
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 5,
+            "height": 13
+          }
+        },
+        "dabi1": {
+          "dabi1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              211.91,
+              13.96,
+              183.55,
+              -74.61,
+              -18.35,
+              -9.95,
+              10.01,
+              78.62
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 93,
+            "height": 212
+          }
+        },
+        "dabi2": {
+          "dabi2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              0.15432,
+              1,
+              0.32532,
+              0.66257,
+              0.65069,
+              0.43947,
+              1,
+              0,
+              1,
+              0,
+              0.92857,
+              0.31199,
+              0.21844,
+              0.41822,
+              0.08069,
+              0.59351,
+              0,
+              0.88035,
+              0,
+              0.83254,
+              0.37519
+            ],
+            "triangles": [
+              3,
+              4,
+              5,
+              2,
+              3,
+              5,
+              5,
+              6,
+              2,
+              2,
+              10,
+              1,
+              2,
+              6,
+              10,
+              10,
+              6,
+              0,
+              0,
+              6,
+              7,
+              1,
+              10,
+              0,
+              8,
+              0,
+              7,
+              0,
+              8,
+              9
+            ],
+            "vertices": [
+              1,
+              18,
+              6.82,
+              28.89,
+              1,
+              1,
+              18,
+              41.43,
+              37.09,
+              1,
+              1,
+              18,
+              114.52,
+              22.17,
+              1,
+              2,
+              18,
+              190,
+              18.73,
+              0.48,
+              19,
+              -1.32,
+              20.76,
+              0.52,
+              2,
+              18,
+              199.43,
+              -21.04,
+              0.48,
+              19,
+              11.31,
+              -18.11,
+              0.52,
+              2,
+              18,
+              184.97,
+              -24.46,
+              0.18448,
+              19,
+              -2.81,
+              -22.71,
+              0.81552,
+              1,
+              18,
+              34.55,
+              -30.29,
+              1,
+              1,
+              18,
+              4.4,
+              -27.29,
+              1,
+              1,
+              18,
+              -15.7,
+              -15.3,
+              1,
+              1,
+              18,
+              -21.85,
+              10.66,
+              1,
+              1,
+              18,
+              55.11,
+              24.33,
+              1
+            ],
+            "hull": 10,
+            "edges": [
+              8,
+              10,
+              6,
+              8,
+              16,
+              18,
+              2,
+              0,
+              18,
+              0,
+              2,
+              4,
+              4,
+              6,
+              16,
+              14,
+              14,
+              12,
+              12,
+              10
+            ],
+            "width": 93,
+            "height": 208
+          }
+        },
+        "datui1": {
+          "datui1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              333.13,
+              73.16,
+              337.47,
+              -36.76,
+              -24.25,
+              -51.04,
+              -28.59,
+              58.88
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 110,
+            "height": 362
+          }
+        },
+        "datui2": {
+          "datui2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              343.36,
+              41.63,
+              337.47,
+              -67.21,
+              -24,
+              -47.67,
+              -18.11,
+              61.17
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 109,
+            "height": 362
+          }
+        },
+        "duzi": {
+          "duzi": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -0.59,
+              -99.83,
+              -5.72,
+              89.1,
+              219.19,
+              95.21,
+              224.33,
+              -93.72
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 189,
+            "height": 225
+          }
+        },
+        "er1": {
+          "er1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              77.8,
+              1139,
+              49.8,
+              1139,
+              49.8,
+              1182,
+              77.8,
+              1182
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 28,
+            "height": 43
+          }
+        },
+        "er2": {
+          "er2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -50.2,
+              1139,
+              -78.2,
+              1139,
+              -78.2,
+              1182,
+              -50.2,
+              1182
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 28,
+            "height": 43
+          }
+        },
+        "gaoguang1": {
+          "gaoguang1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              34.8,
+              1167,
+              30.8,
+              1167,
+              30.8,
+              1171,
+              34.8,
+              1171
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 4,
+            "height": 4
+          }
+        },
+        "gaoguang2": {
+          "gaoguang2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -20.2,
+              1167,
+              -25.2,
+              1167,
+              -25.2,
+              1170,
+              -20.2,
+              1170
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 5,
+            "height": 3
+          }
+        },
+        "jiao1": {
+          "jiao1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              104.18,
+              23.63,
+              106.55,
+              -26.31,
+              -6.32,
+              -31.68,
+              -8.7,
+              18.26
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 50,
+            "height": 113
+          }
+        },
+        "jiao2": {
+          "jiao2": {
+            "x": 53.39,
+            "y": 3.79,
+            "rotation": 86.75,
+            "width": 50,
+            "height": 113
+          }
+        },
+        "lian": {
+          "lian": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -9.5,
+              -75.23,
+              -6.28,
+              69.74,
+              173.68,
+              65.74,
+              170.45,
+              -79.23
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 145,
+            "height": 180
+          }
+        },
+        "liuhai": {
+          "liuhai": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              48.8,
+              1187,
+              -52.2,
+              1187,
+              -52.2,
+              1253,
+              48.8,
+              1253
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 101,
+            "height": 66
+          }
+        },
+        "mei1": {
+          "mei1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              52.8,
+              1186,
+              10.8,
+              1186,
+              10.8,
+              1197,
+              52.8,
+              1197
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 42,
+            "height": 11
+          }
+        },
+        "mei2": {
+          "mei2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -13.2,
+              1186,
+              -54.2,
+              1186,
+              -54.2,
+              1197,
+              -13.2,
+              1197
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 41,
+            "height": 11
+          }
+        },
+        "neiku": {
+          "neiku": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              93.48,
+              -69.25,
+              -120.52,
+              -69.25,
+              -120.52,
+              50.75,
+              93.48,
+              50.75
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 214,
+            "height": 120
+          }
+        },
+        "neiyi": {
+          "neiyi": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              50.46,
+              -22.46,
+              -117.54,
+              -22.46,
+              -117.54,
+              36.54,
+              50.46,
+              36.54
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 168,
+            "height": 59
+          }
+        },
+        "qianfa1": {
+          "qianfa1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              69.8,
+              1097,
+              -0.2,
+              1097,
+              -0.2,
+              1259,
+              69.8,
+              1259
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 70,
+            "height": 162
+          }
+        },
+        "qianfa2": {
+          "qianfa2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -9.2,
+              1096,
+              -72.2,
+              1096,
+              -72.2,
+              1258,
+              -9.2,
+              1258
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 63,
+            "height": 162
+          }
+        },
+        "shangchun": {
+          "shangchun": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              15.8,
+              1126,
+              -17.2,
+              1126,
+              -17.2,
+              1134,
+              15.8,
+              1134
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 33,
+            "height": 8
+          }
+        },
+        "shangjiemao1": {
+          "shangjiemao1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              47.8,
+              1173,
+              37.8,
+              1173,
+              37.8,
+              1178,
+              47.8,
+              1178
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 10,
+            "height": 5
+          }
+        },
+        "shangjiemao2": {
+          "shangjiemao2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -40.2,
+              1173,
+              -50.2,
+              1173,
+              -50.2,
+              1178,
+              -40.2,
+              1178
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 10,
+            "height": 5
+          }
+        },
+        "shangyanpi1": {
+          "shangyanpi1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              51.8,
+              1170,
+              8.8,
+              1170,
+              8.8,
+              1192,
+              51.8,
+              1192
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 43,
+            "height": 22
+          }
+        },
+        "shangyanpi2": {
+          "shangyanpi2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -12.2,
+              1170,
+              -52.2,
+              1170,
+              -52.2,
+              1191,
+              -12.2,
+              1191
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 40,
+            "height": 21
+          }
+        },
+        "shenti": {
+          "shenti": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -19.5,
+              -96.55,
+              -20.7,
+              88.45,
+              196.3,
+              89.86,
+              197.5,
+              -95.14
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 185,
+            "height": 217
+          }
+        },
+        "shou1": {
+          "shou1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              80.44,
+              4.45,
+              45.64,
+              -41.95,
+              -15.16,
+              3.65,
+              19.64,
+              50.05
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 58,
+            "height": 76
+          }
+        },
+        "shou2": {
+          "shou2": {
+            "type": "mesh",
+            "uvs": [
+              0.10157,
+              0.39337,
+              0.44723,
+              0.26094,
+              0.6672,
+              0.06431,
+              1,
+              0.22081,
+              1,
+              0.34522,
+              0.91859,
+              0.57797,
+              0.68291,
+              0.76658,
+              0.68815,
+              0.85888,
+              0.53627,
+              1,
+              0.18537,
+              1,
+              0,
+              0.88295,
+              0,
+              0.69434
+            ],
+            "triangles": [
+              7,
+              8,
+              6,
+              6,
+              8,
+              9,
+              6,
+              9,
+              11,
+              9,
+              10,
+              11,
+              11,
+              0,
+              6,
+              0,
+              1,
+              6,
+              6,
+              1,
+              5,
+              5,
+              1,
+              4,
+              1,
+              2,
+              3,
+              4,
+              1,
+              3
+            ],
+            "vertices": [
+              1,
+              20,
+              37.42,
+              -24.76,
+              1,
+              1,
+              20,
+              17.27,
+              -14.1,
+              1,
+              2,
+              20,
+              -2.59,
+              -12.34,
+              0.512,
+              19,
+              140.85,
+              -12.41,
+              0.488,
+              2,
+              20,
+              -4.2,
+              10.65,
+              0.512,
+              19,
+              146.24,
+              9.99,
+              0.488,
+              2,
+              20,
+              3.59,
+              16.21,
+              0.392,
+              19,
+              155.35,
+              12.96,
+              0.608,
+              1,
+              20,
+              20.97,
+              22.72,
+              1,
+              1,
+              20,
+              40.87,
+              19.85,
+              1,
+              1,
+              20,
+              46.47,
+              24.23,
+              1,
+              1,
+              20,
+              60.52,
+              23.26,
+              1,
+              1,
+              20,
+              72.56,
+              6.41,
+              1,
+              1,
+              20,
+              71.58,
+              -7.73,
+              1,
+              1,
+              20,
+              59.76,
+              -16.17,
+              1
+            ],
+            "hull": 12,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              6,
+              8,
+              8,
+              10,
+              10,
+              12,
+              12,
+              14,
+              14,
+              16,
+              16,
+              18,
+              20,
+              18,
+              20,
+              22,
+              0,
+              22
+            ],
+            "width": 59,
+            "height": 77
+          }
+        },
+        "shuangyanpi1": {
+          "shuangyanpi1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              40.8,
+              1180,
+              18.8,
+              1180,
+              18.8,
+              1188,
+              40.8,
+              1188
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 22,
+            "height": 8
+          }
+        },
+        "shuangyanpi2": {
+          "shuangyanpi2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -21.2,
+              1180,
+              -43.2,
+              1180,
+              -43.2,
+              1188,
+              -21.2,
+              1188
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 22,
+            "height": 8
+          }
+        },
+        "xiachun": {
+          "xiachun": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              18.8,
+              1105,
+              -19.2,
+              1105,
+              -19.2,
+              1128,
+              18.8,
+              1128
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 38,
+            "height": 23
+          }
+        },
+        "xiajiemao1": {
+          "xiajiemao1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              40.8,
+              1157,
+              30.8,
+              1157,
+              30.8,
+              1163,
+              40.8,
+              1163
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 10,
+            "height": 6
+          }
+        },
+        "xiajiemao2": {
+          "xiajiemao2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -33.2,
+              1156,
+              -44.2,
+              1156,
+              -44.2,
+              1163,
+              -33.2,
+              1163
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 11,
+            "height": 7
+          }
+        },
+        "xiaobi1": {
+          "xiaobi1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              189.93,
+              3.74,
+              164.21,
+              -77.28,
+              -30.23,
+              -15.55,
+              -4.51,
+              65.46
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 85,
+            "height": 204
+          }
+        },
+        "xiaobi2": {
+          "xiaobi2": {
+            "type": "mesh",
+            "uvs": [
+              0.13482,
+              0.68893,
+              0.36776,
+              0.24483,
+              0.5101,
+              0.04251,
+              1,
+              0.07883,
+              0.93099,
+              0.23457,
+              0.71544,
+              0.46908,
+              0.34342,
+              0.85309,
+              0.0452,
+              0.79007
+            ],
+            "triangles": [
+              7,
+              0,
+              6,
+              5,
+              1,
+              4,
+              0,
+              1,
+              5,
+              6,
+              0,
+              5,
+              1,
+              2,
+              4,
+              4,
+              2,
+              3
+            ],
+            "vertices": [
+              2,
+              19,
+              130.26,
+              -13.5,
+              0.688,
+              20,
+              -12.36,
+              -16.57,
+              0.312,
+              2,
+              19,
+              37.91,
+              -22.47,
+              0.736,
+              18,
+              225.58,
+              -27.55,
+              0.264,
+              2,
+              19,
+              -5.12,
+              -23.59,
+              0.496,
+              18,
+              182.6,
+              -25.16,
+              0.504,
+              2,
+              19,
+              -11.11,
+              18.76,
+              0.49615,
+              18,
+              180.09,
+              17.54,
+              0.50385,
+              2,
+              19,
+              20.94,
+              22.95,
+              0.68275,
+              18,
+              212.37,
+              19.1,
+              0.31725,
+              1,
+              19,
+              72.17,
+              20.11,
+              1,
+              2,
+              19,
+              156.56,
+              13.91,
+              0.544,
+              20,
+              4.46,
+              17.49,
+              0.456,
+              2,
+              19,
+              152.27,
+              -14.45,
+              0.544,
+              20,
+              8.91,
+              -10.85,
+              0.456
+            ],
+            "hull": 8,
+            "edges": [
+              4,
+              6,
+              6,
+              8,
+              8,
+              10,
+              10,
+              12,
+              12,
+              14,
+              4,
+              2,
+              2,
+              0,
+              0,
+              14
+            ],
+            "width": 86,
+            "height": 204
+          }
+        },
+        "xiaotui1": {
+          "xiaotui1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              278.56,
+              81.74,
+              281.89,
+              -25.21,
+              -352.81,
+              -44.97,
+              -356.14,
+              61.98
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 107,
+            "height": 635
+          }
+        },
+        "xiaotui2": {
+          "xiaotui2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              291.93,
+              25.46,
+              287.3,
+              -80.44,
+              -347.09,
+              -52.74,
+              -342.47,
+              53.16
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 106,
+            "height": 635
+          }
+        },
+        "yanbai1": {
+          "yanbai1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              43.8,
+              1157,
+              14.8,
+              1157,
+              14.8,
+              1177,
+              43.8,
+              1177
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 29,
+            "height": 20
+          }
+        },
+        "yanbai2": {
+          "yanbai2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -17.2,
+              1157,
+              -46.2,
+              1157,
+              -46.2,
+              1177,
+              -17.2,
+              1177
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 29,
+            "height": 20
+          }
+        },
+        "yanzhu1": {
+          "yanzhu1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              35.8,
+              1158,
+              17.8,
+              1158,
+              17.8,
+              1178,
+              35.8,
+              1178
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 18,
+            "height": 20
+          }
+        },
+        "yanzhu2": {
+          "yanzhu2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -20.2,
+              1158,
+              -38.2,
+              1158,
+              -38.2,
+              1178,
+              -20.2,
+              1178
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 18,
+            "height": 20
+          }
+        },
+        "yinying1": {
+          "xiuxianqun/tuiyinying1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              15.06,
+              78.81,
+              19.16,
+              -25.11,
+              -229.64,
+              -34.93,
+              -233.75,
+              68.99
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 104,
+            "height": 249
+          }
+        },
+        "yinying2": {
+          "xiuxianqun/tuiyinying2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              17.33,
+              32.56,
+              11.71,
+              -71.28,
+              -233.93,
+              -58.01,
+              -228.31,
+              45.84
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 104,
+            "height": 246
+          }
+        },
+        "zuinei": {
+          "zuinei": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              14.8,
+              1112,
+              -16.2,
+              1112,
+              -16.2,
+              1128,
+              14.8,
+              1128
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 31,
+            "height": 16
+          }
+        }
+      }
+    },
+    {
+      "name": "loqun",
+      "attachments": {
+        "dingfa": {
+          "dingfa": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              84.8,
+              1134,
+              -88.2,
+              1134,
+              -88.2,
+              1277,
+              84.8,
+              1277
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 173,
+            "height": 143
+          }
+        },
+        "houfa1": {
+          "houfa1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              82.8,
+              870,
+              16.8,
+              870,
+              16.8,
+              1149,
+              82.8,
+              1149
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 66,
+            "height": 279
+          }
+        },
+        "houfa2": {
+          "houfa2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -32.2,
+              874,
+              -84.2,
+              874,
+              -84.2,
+              1148,
+              -32.2,
+              1148
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 52,
+            "height": 274
+          }
+        },
+        "houzhaoqun": {
+          "houzhaoqun": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              213.8,
+              513,
+              -215.2,
+              513,
+              -215.2,
+              911,
+              213.8,
+              911
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 429,
+            "height": 398
+          }
+        },
+        "huabian": {
+          "huabian": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              220.8,
+              462,
+              -224.2,
+              462,
+              -224.2,
+              689,
+              220.8,
+              689
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 445,
+            "height": 227
+          }
+        },
+        "hudiejie1": {
+          "hudiejie1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              91.8,
+              1115,
+              49.8,
+              1115,
+              49.8,
+              1160,
+              91.8,
+              1160
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 42,
+            "height": 45
+          }
+        },
+        "hudiejie2": {
+          "hudiejie2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -53.2,
+              1109,
+              -98.2,
+              1109,
+              -98.2,
+              1156,
+              -53.2,
+              1156
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 45,
+            "height": 47
+          }
+        },
+        "jinshi": {
+          "jinshi": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              29.8,
+              1064,
+              -30.2,
+              1064,
+              -30.2,
+              1092,
+              29.8,
+              1092
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 60,
+            "height": 28
+          }
+        },
+        "neiqun": {
+          "neiqun": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              213.8,
+              486,
+              -215.2,
+              486,
+              -215.2,
+              911,
+              213.8,
+              911
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 429,
+            "height": 425
+          }
+        },
+        "shangyi": {
+          "shangyi": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              126.8,
+              756,
+              -125.2,
+              756,
+              -125.2,
+              1064,
+              126.8,
+              1064
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 252,
+            "height": 308
+          }
+        },
+        "wa1": {
+          "wa1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              193.7,
+              57.51,
+              196,
+              -16.46,
+              -87.87,
+              -25.29,
+              -90.17,
+              48.67
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 74,
+            "height": 284
+          }
+        },
+        "wa2": {
+          "wa2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              193.11,
+              18.41,
+              189.88,
+              -55.52,
+              -93.85,
+              -43.13,
+              -90.62,
+              30.8
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 74,
+            "height": 284
+          }
+        },
+        "xie1": {
+          "xie1": {
+            "x": -47.02,
+            "y": -2.64,
+            "rotation": 92.73,
+            "width": 55,
+            "height": 116
+          }
+        },
+        "xie2": {
+          "xie2": {
+            "x": -48.09,
+            "y": 3.05,
+            "rotation": 86.75,
+            "width": 55,
+            "height": 116
+          }
+        },
+        "xiu1": {
+          "xiu1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              165.8,
+              906,
+              71.8,
+              906,
+              71.8,
+              1055,
+              165.8,
+              1055
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 94,
+            "height": 149
+          }
+        },
+        "xiu2": {
+          "xiu2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              52.01,
+              71.33,
+              73.69,
+              -20.14,
+              -72.27,
+              -54.73,
+              -93.95,
+              36.74
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 94,
+            "height": 150
+          }
+        },
+        "zhaoqun1": {
+          "zhaoqun1": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              211.8,
+              618,
+              37.8,
+              618,
+              37.8,
+              911,
+              211.8,
+              911
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 174,
+            "height": 293
+          }
+        },
+        "zhaoqun2": {
+          "zhaoqun2": {
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              -39.2,
+              619,
+              -213.2,
+              619,
+              -213.2,
+              912,
+              -39.2,
+              912
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 174,
+            "height": 293
+          }
+        }
+      }
+    },
+    {
+      "name": "xiuxianqun",
+      "attachments": {
+        "dingfa": {
+          "dingfa": {
+            "name": "xiuxianqun/dingfa2",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              75.8,
+              1136,
+              -79.2,
+              1136,
+              -79.2,
+              1275,
+              75.8,
+              1275
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 155,
+            "height": 139
+          }
+        },
+        "houfa2": {
+          "houfa2": {
+            "name": "xiuxianqun/houduanfa",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              91,
+              1090.09,
+              -88,
+              1090.09,
+              -88,
+              1270.09,
+              91,
+              1270.09
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 179,
+            "height": 180
+          }
+        },
+        "huabian": {
+          "huabian": {
+            "name": "xiuxianqun/baihuabian",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              204.32,
+              523.5,
+              -206.68,
+              523.5,
+              -206.68,
+              627.5,
+              204.32,
+              627.5
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 411,
+            "height": 104
+          }
+        },
+        "jinshi": {
+          "jinshi": {
+            "name": "xiuxianqun/jinquan",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              26.8,
+              1065.78,
+              -27.2,
+              1065.78,
+              -27.2,
+              1081.78,
+              26.8,
+              1081.78
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 54,
+            "height": 16
+          }
+        },
+        "neiqun": {
+          "neiqun": {
+            "name": "xiuxianqun/waiqun",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              203.19,
+              527.76,
+              -202.81,
+              527.76,
+              -202.81,
+              875.76,
+              203.19,
+              875.76
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 406,
+            "height": 348
+          }
+        },
+        "shangyi": {
+          "shangyi": {
+            "name": "xiuxianqun/shangshen",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              90.83,
+              858.2,
+              -94.17,
+              858.2,
+              -94.17,
+              1061.2,
+              90.83,
+              1061.2
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 185,
+            "height": 203
+          }
+        },
+        "wa1": {
+          "wa1": {
+            "name": "xiuxianqun/changwa1",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              197.76,
+              69.52,
+              200.41,
+              -15.44,
+              -270.36,
+              -30.09,
+              -273.01,
+              54.87
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 85,
+            "height": 471
+          }
+        },
+        "wa2": {
+          "wa2": {
+            "name": "xiuxianqun/changwa2",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              197.96,
+              18.78,
+              194.25,
+              -66.14,
+              -276.3,
+              -45.59,
+              -272.59,
+              39.33
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 85,
+            "height": 471
+          }
+        },
+        "xie1": {
+          "xie1": {
+            "name": "xiuxianqun/xiezi1",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              12.13,
+              31.85,
+              14.98,
+              -27.99,
+              -46.89,
+              -30.94,
+              -49.74,
+              28.9
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 57,
+            "height": 61
+          }
+        },
+        "xie2": {
+          "xie2": {
+            "name": "xiuxianqun/xiezi2",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              14.7,
+              28.8,
+              11.29,
+              -31.22,
+              -51.48,
+              -27.65,
+              -48.07,
+              32.36
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 57,
+            "height": 61
+          }
+        },
+        "xiu1": {
+          "xiu1": {
+            "name": "xiuxianqun/xiuzi1",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              164.49,
+              908.21,
+              70.49,
+              908.21,
+              70.49,
+              1058.21,
+              164.49,
+              1058.21
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 94,
+            "height": 150
+          }
+        },
+        "xiu2": {
+          "xiu2": {
+            "name": "xiuxianqun/xiuzi2",
+            "type": "mesh",
+            "uvs": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "triangles": [
+              1,
+              2,
+              3,
+              1,
+              3,
+              0
+            ],
+            "vertices": [
+              49.34,
+              72.81,
+              71.02,
+              -18.66,
+              -74.94,
+              -53.25,
+              -96.62,
+              38.22
+            ],
+            "hull": 4,
+            "edges": [
+              0,
+              2,
+              2,
+              4,
+              4,
+              6,
+              0,
+              6
+            ],
+            "width": 94,
+            "height": 150
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "animation": {}
+  }
+}
