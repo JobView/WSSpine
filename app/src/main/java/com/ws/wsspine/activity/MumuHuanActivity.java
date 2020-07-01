@@ -9,13 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.badlogic.gdx.backends.android.AppActivity;
 import com.ws.wsspine.R;
 import com.ws.wsspine.model.MumuHuan;
 
+import com.badlogic.gdx.backends.android.SpineViewHelper;
 
-public class MumuHuanActivity extends AppActivity {
+
+public class MumuHuanActivity extends AppCompatActivity {
 
     MumuHuan dragon;
     View dragonView;
@@ -40,8 +44,9 @@ public class MumuHuanActivity extends AppActivity {
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
         dragon = new MumuHuan(viewSizeWidth, viewSizeHeight);
-        dragonView = initializeForView(dragon, cfg);
-        dragonView.setBackgroundColor(0xFF7C9829);
+//        dragonView = initializeForView(dragon, cfg);
+        dragonView = new SpineViewHelper(this).initializeForView(dragon, cfg);
+        dragonView.setBackgroundColor(0xFFFFFFFF);
 
         if (dragonView instanceof SurfaceView) {
             SurfaceView glView = (SurfaceView) dragonView;

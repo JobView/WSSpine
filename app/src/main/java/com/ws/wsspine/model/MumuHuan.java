@@ -50,7 +50,7 @@ public class MumuHuan extends ApplicationAdapter {
 
     private String defaultAnimation = "daiji";
 
-    String [] animations = new String[]{"diantou", "kuajiao", "zhayan"};
+    String [] animations = new String[]{"kuajiao", "yaotou"};
     int indexAnimation = 0;
 
     public MumuHuan(float width, float height) {
@@ -136,43 +136,43 @@ public class MumuHuan extends ApplicationAdapter {
 
             }
         });
-//        Gdx.input.setInputProcessor(new InputAdapter() {
-//            final Vector3 point = new Vector3();
-//
-//            public boolean touchDown (int screenX, int screenY, int pointer, int button) {
-//                camera.unproject(point.set(screenX, screenY, 0)); // Convert window to world coordinates.
-//                bounds.update(skeleton, true); // Update SkeletonBounds with current skeleton bounding box positions.
-//                if (bounds.aabbContainsPoint(point.x, point.y)) { // Check if inside AABB first. This check is fast.
-//                    BoundingBoxAttachment hit = bounds.containsPoint(point.x, point.y); // Check if inside a bounding box.
-//                    if (hit != null) {
-//                        System.out.println("hit: " + hit);
-//                        skeleton.findSlot("head").getColor().set(Color.RED); // Turn head red until touchUp.
-//                    }
-//                }
-//                return true;
-//            }
-//
-//            public boolean touchUp (int screenX, int screenY, int pointer, int button) {
-//                if(!isClickAnimation){
-//                    state.setAnimation(0, "kuajiao", false); // Set animation on track 0 to jump.
-//                    state.addAnimation(0, "daiji", true, 0); // Queue run to play after jump.
-//                }
-//                return true;
-//            }
-//
-//            public boolean keyDown (int keycode) {
-//                switch (keycode){
-//                    case 8:
-//                        state.setAnimation(0, "animation", false); // Set animation on track 0 to jump.!
-//                        break;
-//                    case 9:
-//                        state.setAnimation(0, "animation", false); // Set animation on track 0 to jump.
-//                        break;
-//                }
-//                state.addAnimation(0, "animation", true, 0); // Queue run to play after jump.
-//                return true;
-//            }
-//        });
+        Gdx.input.setInputProcessor(new InputAdapter() {
+            final Vector3 point = new Vector3();
+
+            public boolean touchDown (int screenX, int screenY, int pointer, int button) {
+                camera.unproject(point.set(screenX, screenY, 0)); // Convert window to world coordinates.
+                bounds.update(skeleton, true); // Update SkeletonBounds with current skeleton bounding box positions.
+                if (bounds.aabbContainsPoint(point.x, point.y)) { // Check if inside AABB first. This check is fast.
+                    BoundingBoxAttachment hit = bounds.containsPoint(point.x, point.y); // Check if inside a bounding box.
+                    if (hit != null) {
+                        System.out.println("hit: " + hit);
+                        skeleton.findSlot("head").getColor().set(Color.RED); // Turn head red until touchUp.
+                    }
+                }
+                return true;
+            }
+
+            public boolean touchUp (int screenX, int screenY, int pointer, int button) {
+                if(!isClickAnimation){
+                    state.setAnimation(0, "kuajiao", false); // Set animation on track 0 to jump.
+                    state.addAnimation(0, "daiji", true, 0); // Queue run to play after jump.
+                }
+                return true;
+            }
+
+            public boolean keyDown (int keycode) {
+                switch (keycode){
+                    case 8:
+                        state.setAnimation(0, defaultAnimation, false); // Set animation on track 0 to jump.!
+                        break;
+                    case 9:
+                        state.setAnimation(0, defaultAnimation, false); // Set animation on track 0 to jump.
+                        break;
+                }
+                state.addAnimation(0, defaultAnimation, true, 0); // Queue run to play after jump.
+                return true;
+            }
+        });
 
     }
 
