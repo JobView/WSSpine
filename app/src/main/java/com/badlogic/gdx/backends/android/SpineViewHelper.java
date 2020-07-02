@@ -9,7 +9,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.LifecycleListener;
 import com.badlogic.gdx.backends.android.surfaceview.FillResolutionStrategy;
 import com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy;
-import com.ws.wsspine.WSSpineBaseApplication;
 
 public class SpineViewHelper extends WSSpineBaseApplication {
 

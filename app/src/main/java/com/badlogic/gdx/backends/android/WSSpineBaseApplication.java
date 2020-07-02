@@ -1,4 +1,4 @@
-package com.ws.wsspine;
+package com.badlogic.gdx.backends.android;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,15 +19,6 @@ import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.LifecycleListener;
 import com.badlogic.gdx.Net;
 import com.badlogic.gdx.Preferences;
-import com.badlogic.gdx.backends.android.AndroidApplicationBase;
-import com.badlogic.gdx.backends.android.AndroidAudio;
-import com.badlogic.gdx.backends.android.AndroidClipboard;
-import com.badlogic.gdx.backends.android.AndroidEventListener;
-import com.badlogic.gdx.backends.android.AndroidFiles;
-import com.badlogic.gdx.backends.android.AndroidGraphics;
-import com.badlogic.gdx.backends.android.AndroidInput;
-import com.badlogic.gdx.backends.android.AndroidNet;
-import com.badlogic.gdx.backends.android.AndroidPreferences;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Clipboard;
 import com.badlogic.gdx.utils.GdxNativesLoader;

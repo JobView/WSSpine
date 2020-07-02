@@ -27,8 +27,6 @@ public class MumuHuanActivity extends AppCompatActivity {
 
     String [] skins = new String[]{ "loqun", "xiuxianqun"};
     int indexSkins = 0;
-    String [] animations = new String[]{"diantou", "kuajiao", "zhayan"};
-    int indexAnimation = 0;
 
     int viewSizeHeight;
     int viewSizeWidth;
