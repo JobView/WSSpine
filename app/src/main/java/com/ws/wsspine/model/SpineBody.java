@@ -7,11 +7,8 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.PolygonSpriteBatch;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.JsonReader;
@@ -25,11 +22,10 @@ import com.esotericsoftware.spine.SkeletonData;
 import com.esotericsoftware.spine.SkeletonJson;
 import com.esotericsoftware.spine.SkeletonRenderer;
 import com.esotericsoftware.spine.SkeletonRendererDebug;
-import com.esotericsoftware.spine.Skin;
 import com.esotericsoftware.spine.attachments.BoundingBoxAttachment;
 import com.esotericsoftware.spine.utils.TwoColorPolygonBatch;
 
-public class MumuHuan extends ApplicationAdapter {
+public class SpineBody extends ApplicationAdapter {
 
     OrthographicCamera camera;
     TwoColorPolygonBatch batch;
@@ -48,12 +44,12 @@ public class MumuHuan extends ApplicationAdapter {
     private float width;
     private float height;
 
-    private String defaultAnimation = "daiji";
+    private String defaultAnimation = "idle";
 
-    String [] animations = new String[]{"kuajiao", "yaotou"};
+    String [] animations = new String[]{"death", "hit", "idle", "run", "jump", "shoot","walk"};
     int indexAnimation = 0;
 
-    public MumuHuan(float width, float height) {
+    public SpineBody(float width, float height) {
         this.width = width;
         this.height = height;
     }
@@ -69,17 +65,18 @@ public class MumuHuan extends ApplicationAdapter {
         debugRenderer.setRegionAttachments(false);
         debugRenderer.setMeshHull(false);
 
-        atlas = new TextureAtlas(Gdx.files.internal("mumu3/mumuzhayan.atlas"));
+        atlas = new TextureAtlas(Gdx.files.internal("spineboy/spineboy-pma.atlas"));
         json = new SkeletonJson(atlas); // This loads skeleton JSON data, which is stateless.
         // Load the skeleton at 60% the size it was in Spine.
-        Pair<Float, Float> paintSize = readSkeletonSize(Gdx.files.internal("mumu3/mumuzhayan.json")); //只读取数据， 也可由外部传入
+        Pair<Float, Float> paintSize = readSkeletonSize(Gdx.files.internal("spineboy/spineboy-ess.json")); //只读取数据， 也可由外部传入
         json.setScale(Math.min(this.width / paintSize.first, this.height / paintSize.second));
-        skeletonData = json.readSkeletonData(Gdx.files.internal("mumu3/mumuzhayan.json"));
+        skeletonData = json.readSkeletonData(Gdx.files.internal("spineboy/spineboy-ess.json"));
 
         skeleton = new Skeleton(skeletonData); // Skeleton holds skeleton state (bone positions, slot attachments, etc).
 
         skeleton.setPosition(this.width / 2, (this.width / paintSize.first) > (this.height / paintSize.second)? 0 : (this.height - paintSize.second * json.getScale())  / 2);
-        skeleton.setAttachment("liuhai1", "liuhai1");
+//        skeleton.setAttachment("liuhai1", "liuhai1");
+        skeleton.setAttachment("head-bb", "head");
 
         bounds = new SkeletonBounds(); // Convenience class to do hit detection with bounding boxes.
 
@@ -93,7 +90,8 @@ public class MumuHuan extends ApplicationAdapter {
 
         addListener();
 
-        setSkin("loqun");
+        setSkin("default");
+        skeleton.setAttachment("head-bb", "head");
     }
 
     private void addListener() {
@@ -145,11 +143,7 @@ public class MumuHuan extends ApplicationAdapter {
                 if (bounds.aabbContainsPoint(point.x, point.y)) { // Check if inside AABB first. This check is fast.
                     BoundingBoxAttachment hit = bounds.containsPoint(point.x, point.y); // Check if inside a bounding box.
                     if (hit != null) {
-                        System.out.println("hit: " + hit);
-                        if(!isClickAnimation) {
-                            state.setAnimation(0, "kuajiao", false); // Set animation on track 0 to jump.
-                            state.addAnimation(0, "daiji", true, 0); // Queue run to play after jump.
-                        }
+                        changeAnimation();
                     }
                 }
                 return true;
@@ -186,7 +180,7 @@ public class MumuHuan extends ApplicationAdapter {
 
         Gdx.gl.glClearColor(0, 0, 0, 0);
 
-        state.apply(skeleton); // Poses skeleton using current animations. This sets the bones' local SRT.
+        if (state.apply(skeleton))// Poses skeleton using current animations. This sets the bones' local SRT.
         skeleton.updateWorldTransform(); // Uses the bones' local SRT to compute their world SRT.
 
         // Configure the camera, SpriteBatch, and SkeletonRendererDebug.
