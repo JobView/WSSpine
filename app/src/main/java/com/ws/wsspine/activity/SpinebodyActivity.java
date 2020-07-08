@@ -3,7 +3,10 @@ package com.ws.wsspine.activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +15,7 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import com.badlogic.gdx.backends.android.AppActivity;
 import com.badlogic.gdx.backends.android.SpineViewHelper;
 import com.ws.wsspine.R;
 import com.ws.wsspine.model.MumuHuan;
@@ -36,7 +40,7 @@ public class SpinebodyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blank);
         flContainer = findViewById(R.id.fl_container);
         viewSizeWidth = (int) (getScreenWidth() * 1);
-        viewSizeHeight = dip2px(400);
+        viewSizeHeight = dip2px(200);
 
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
@@ -50,11 +54,32 @@ public class SpinebodyActivity extends AppCompatActivity {
             glView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
             glView.setZOrderOnTop(true);
         }
-        addDragon();
+        addDragon(true);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
+                cfg.r = cfg.g = cfg.b = cfg.a = 8;
+                MumuHuan dragon = new MumuHuan(viewSizeWidth, viewSizeHeight);
+                dragonView = new SpineViewHelper(SpinebodyActivity.this).initializeForView(dragon, cfg);
+                dragonView.setBackgroundColor(0xFF814317);
+
+                if (dragonView instanceof SurfaceView) {
+                    SurfaceView glView = (SurfaceView) dragonView;
+                    glView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
+                    glView.setZOrderOnTop(true);
+                }
+                addDragon(false);
+            }
+        }, 100);
     }
 
-    public void addDragon() {
+    public void addDragon(boolean setClick) {
         flContainer.addView(dragonView, new ViewGroup.LayoutParams(viewSizeWidth, viewSizeHeight));
+        if(setClick){
+            dragon.setTouchEvent(dragonView);
+        }
+
     }
 
 

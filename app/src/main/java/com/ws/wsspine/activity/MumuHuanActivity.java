@@ -37,7 +37,7 @@ public class MumuHuanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blank);
         flContainer = findViewById(R.id.fl_container);
         viewSizeWidth = (int) (getScreenWidth() * 1);
-        viewSizeHeight = dip2px(400);
+        viewSizeHeight = dip2px(600);
 
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.r = cfg.g = cfg.b = cfg.a = 8;

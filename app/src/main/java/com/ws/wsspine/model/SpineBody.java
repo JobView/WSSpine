@@ -1,12 +1,16 @@
 package com.ws.wsspine.model;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
+import android.view.MotionEvent;
+import android.view.View;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -134,42 +138,44 @@ public class SpineBody extends ApplicationAdapter {
 
             }
         });
-        Gdx.input.setInputProcessor(new InputAdapter() {
-            final Vector3 point = new Vector3();
-
-            public boolean touchDown (int screenX, int screenY, int pointer, int button) {
-                camera.unproject(point.set(screenX, screenY, 0)); // Convert window to world coordinates.
-                bounds.update(skeleton, true); // Update SkeletonBounds with current skeleton bounding box positions.
-                if (bounds.aabbContainsPoint(point.x, point.y)) { // Check if inside AABB first. This check is fast.
-                    BoundingBoxAttachment hit = bounds.containsPoint(point.x, point.y); // Check if inside a bounding box.
-                    if (hit != null) {
-                        changeAnimation();
-                    }
-                }
-                return true;
-            }
-
-            public boolean touchUp (int screenX, int screenY, int pointer, int button) {
-//                if(!isClickAnimation){
-//                    state.setAnimation(0, "kuajiao", false); // Set animation on track 0 to jump.
-//                    state.addAnimation(0, "daiji", true, 0); // Queue run to play after jump.
+//        Gdx.input.setInputProcessor(new InputAdapter() {
+//            final Vector3 point = new Vector3();
+//
+//            public boolean touchDown (int screenX, int screenY, int pointer, int button) {
+//                Log.d("spine_log", "screenX : " + screenX);
+//                Log.d("spine_log", "screenY : " + screenX);
+//                camera.unproject(point.set(screenX, screenY, 0)); // Convert window to world coordinates.
+//                bounds.update(skeleton, true); // Update SkeletonBounds with current skeleton bounding box positions.
+//                if (bounds.aabbContainsPoint(point.x, point.y)) { // Check if inside AABB first. This check is fast.
+//                    BoundingBoxAttachment hit = bounds.containsPoint(point.x, point.y); // Check if inside a bounding box.
+//                    if (hit != null) {
+//                        changeAnimation();
+//                    }
 //                }
-                return true;
-            }
-
-            public boolean keyDown (int keycode) {
-                switch (keycode){
-                    case 8:
-                        state.setAnimation(0, defaultAnimation, false); // Set animation on track 0 to jump.!
-                        break;
-                    case 9:
-                        state.setAnimation(0, defaultAnimation, false); // Set animation on track 0 to jump.
-                        break;
-                }
-                state.addAnimation(0, defaultAnimation, true, 0); // Queue run to play after jump.
-                return true;
-            }
-        });
+//                return true;
+//            }
+//
+//            public boolean touchUp (int screenX, int screenY, int pointer, int button) {
+////                if(!isClickAnimation){
+////                    state.setAnimation(0, "kuajiao", false); // Set animation on track 0 to jump.
+////                    state.addAnimation(0, "daiji", true, 0); // Queue run to play after jump.
+////                }
+//                return true;
+//            }
+//
+//            public boolean keyDown (int keycode) {
+//                switch (keycode){
+//                    case 8:
+//                        state.setAnimation(0, defaultAnimation, false); // Set animation on track 0 to jump.!
+//                        break;
+//                    case 9:
+//                        state.setAnimation(0, defaultAnimation, false); // Set animation on track 0 to jump.
+//                        break;
+//                }
+//                state.addAnimation(0, defaultAnimation, true, 0); // Queue run to play after jump.
+//                return true;
+//            }
+//        });
 
     }
 
@@ -191,7 +197,7 @@ public class SpineBody extends ApplicationAdapter {
         batch.begin();
         renderer.draw(batch, skeleton); // Draw the skeleton images.
         batch.end();
-        debugRenderer.draw(skeleton); // Draw debug lines.
+//        debugRenderer.draw(skeleton); // Draw debug lines.
     }
 
     public void resize(int width, int height) {
@@ -227,6 +233,37 @@ public class SpineBody extends ApplicationAdapter {
             indexAnimation = (++indexAnimation) % animations.length;
             setAnimation(animations[indexAnimation]);
         }
+    }
+
+
+    public void setTouchEvent(View view){
+        if(view != null){
+            view.setOnTouchListener(new View.OnTouchListener() {
+                final Vector3 point = new Vector3();
+                @Override
+                public boolean onTouch(View view, MotionEvent event) {
+//                    Log.d("spine_log", "getX : " + event.getX());
+//                    Log.d("spine_log", "getY : " + event.getY());
+                    if(event.getAction() == MotionEvent.ACTION_DOWN){
+                        camera.unproject(point.set(event.getX(), event.getY(), 0)); // Convert window to world coordinates.
+                        bounds.update(skeleton, true); // Update SkeletonBounds with current skeleton bounding box positions.
+                        if (bounds.aabbContainsPoint(point.x, point.y)) { // Check if inside AABB first. This check is fast.
+                            skeleton.findSlot("head").getColor().set(Color.RED); // Turn head red until touchUp.
+                            BoundingBoxAttachment hit = bounds.containsPoint(point.x, point.y); // Check if inside a bounding box.
+                            if (hit != null) {
+                                changeAnimation();
+                            }
+                            return true;
+                        }
+                    }else if(event.getAction() == MotionEvent.ACTION_UP){
+                        skeleton.findSlot("head").getColor().set(Color.WHITE);
+                    }
+
+                    return false;
+                }
+            });
+        }
+
     }
 
 
