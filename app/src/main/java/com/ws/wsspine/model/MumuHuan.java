@@ -77,7 +77,6 @@ public class MumuHuan extends ApplicationAdapter {
         skeletonData = json.readSkeletonData(Gdx.files.internal("mumu3/mumuzhayan.json"));
 
         skeleton = new Skeleton(skeletonData); // Skeleton holds skeleton state (bone positions, slot attachments, etc).
-
         skeleton.setPosition(this.width / 2, (this.width / paintSize.first) > (this.height / paintSize.second)? 0 : (this.height - paintSize.second * json.getScale())  / 2);
         skeleton.setAttachment("liuhai1", "liuhai1");
 
