@@ -43,7 +43,7 @@ public class MumuHuanActivity extends AppCompatActivity {
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
         dragon = new MumuHuan(viewSizeWidth, viewSizeHeight);
 //        dragonView = initializeForView(dragon, cfg);
-        dragonView = new SpineViewHelper(this).initializeForView(dragon, cfg);
+        dragonView = new SpineViewHelper(this.getApplication(), getWindowManager()).initializeForView(dragon, cfg);
         dragonView.setBackgroundColor(0xFFFFFFFF);
 
         if (dragonView instanceof SurfaceView) {

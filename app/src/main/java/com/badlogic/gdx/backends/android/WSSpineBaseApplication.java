@@ -25,7 +25,7 @@ import com.badlogic.gdx.utils.GdxNativesLoader;
 import com.badlogic.gdx.utils.SnapshotArray;
 
 public abstract class WSSpineBaseApplication implements AndroidApplicationBase {
-    protected Activity mContext;
+    protected Context mContext;
     protected AndroidGraphics graphics;
 
     protected AndroidInput input;
@@ -44,6 +44,13 @@ public abstract class WSSpineBaseApplication implements AndroidApplicationBase {
     protected boolean hideStatusBar = false;
     private int wasFocusChanged = -1;
     AndroidClipboard clipboard;
+
+    private WindowManager mWindowManager;
+
+    public WSSpineBaseApplication(Context context, WindowManager manager) {
+        this.mContext = context;
+        this.mWindowManager = manager;
+    }
 
     @Override
     public void runOnUiThread(Runnable runnable) {
@@ -210,12 +217,16 @@ public abstract class WSSpineBaseApplication implements AndroidApplicationBase {
 
     @Override
     public WindowManager getWindowManager() {
-        return mContext.getWindowManager();
+//        return mContext.getWindowManager();
+        return mWindowManager;
     }
 
 
     public Window getApplicationWindow() {
-        return mContext.getWindow();
+        if(mContext instanceof Activity){
+            return ((Activity) mContext).getWindow();
+        }
+        return null;
     }
 
     public Context getContext() {

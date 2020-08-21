@@ -1,8 +1,10 @@
 package com.badlogic.gdx.backends.android;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
@@ -12,8 +14,8 @@ import com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy;
 
 public class SpineViewHelper extends WSSpineBaseApplication {
 
-    public SpineViewHelper(Activity context){
-        this.mContext = context;
+    public SpineViewHelper(Context context, WindowManager manager){
+        super(context, manager);
     }
 
 
