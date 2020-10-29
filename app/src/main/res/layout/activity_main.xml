@@ -27,4 +27,23 @@
         app:layout_constraintTop_toTopOf="parent"
         android:text="spinebody"/>
 
+    <Button
+        android:id="@+id/button_multiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="multiple"/>
+    <Button
+        android:id="@+id/button_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="spine_dialog"/>
+
 </LinearLayout>

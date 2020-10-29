@@ -16,6 +16,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven{ url("http://192.168.1.198:8081/repository/ws-android-public/") }
     }
 }
 

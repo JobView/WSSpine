@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.badlogic.gdx.backends.android.AppActivity;
-import com.badlogic.gdx.backends.android.SpineViewHelper;
+import com.badlogic.gdx.backends.android.SpineViewController;
 import com.ws.wsspine.R;
 import com.ws.wsspine.model.MumuHuan;
 import com.ws.wsspine.model.SpineBody;
@@ -46,7 +46,7 @@ public class SpinebodyActivity extends AppCompatActivity {
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
         dragon = new SpineBody(viewSizeWidth, viewSizeHeight);
 //        dragonView = initializeForView(dragon, cfg);
-        dragonView = new SpineViewHelper(this.getApplicationContext(), getWindowManager()).initializeForView(dragon, cfg);
+        dragonView = new SpineViewController(this.getApplicationContext()).initializeForView(dragon, cfg);
         dragonView.setBackgroundColor(0xFF816A17);
 
         if (dragonView instanceof SurfaceView) {
@@ -69,7 +69,7 @@ public class SpinebodyActivity extends AppCompatActivity {
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
         MumuHuan dragon = new MumuHuan(viewSizeWidth, viewSizeHeight);
-        dragonView = new SpineViewHelper(getApplicationContext(), getWindowManager()).initializeForView(dragon, cfg);
+        dragonView = new SpineViewController(getApplicationContext()).initializeForView(dragon, cfg);
         dragonView.setBackgroundColor(0xFF814317);
 
         if (dragonView instanceof SurfaceView) {

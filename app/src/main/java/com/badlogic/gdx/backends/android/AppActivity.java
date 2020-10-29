@@ -7,10 +7,12 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Debug;
 import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.FrameLayout;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 

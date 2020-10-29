@@ -7,4 +7,25 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="blackDialog" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowSoftInputMode">adjustPan|stateHidden</item>
+        <!--是否悬浮在activity上-->
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:windowFrame">@null</item>
+        <!--透明是否-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--activity的背景颜色（一定要设置成#00000000）-->
+        <item name="android:background">#00000000</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--<item name="android:backgroundDimAmount">0.8</item>-->
+        <!--没有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--可以设置Activity的弹出和消失动画（可选）-->
+        <!--<item name="android:windowAnimationStyle">@style/AnimDialog</item>-->
+    </style>
+
 </resources>

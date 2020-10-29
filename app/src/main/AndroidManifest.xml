@@ -19,6 +19,7 @@
 
         <activity android:name=".activity.MumuHuanActivity"></activity>
         <activity android:name=".activity.SpinebodyActivity"></activity>
+        <activity android:name=".activity.MultipleSpineActivity"></activity>
     </application>
 
 </manifest>

@@ -1,10 +1,8 @@
 package com.ws.wsspine.activity;
 
 import android.content.Context;
-import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -12,21 +10,17 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.badlogic.gdx.backends.android.AppActivity;
+import com.badlogic.gdx.backends.android.SpineViewController;
 import com.ws.wsspine.R;
-import com.ws.wsspine.model.MumuHuan;
 
-import com.badlogic.gdx.backends.android.SpineViewHelper;
+import com.ws.wsspine.model.SpineModelLocal;
 
 
 public class MumuHuanActivity extends AppCompatActivity {
 
-    MumuHuan dragon;
+    SpineModelLocal dragon;
     View dragonView;
     ViewGroup flContainer;
-
-    String [] skins = new String[]{ "loqun", "xiuxianqun"};
-    int indexSkins = 0;
 
     int viewSizeHeight;
     int viewSizeWidth;
@@ -36,36 +30,38 @@ public class MumuHuanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blank);
         flContainer = findViewById(R.id.fl_container);
-        viewSizeWidth = (int) (getScreenWidth() * 1);
-        viewSizeHeight = dip2px(600);
+        viewSizeWidth = getScreenWidth();
+        viewSizeHeight = getScreenWidth() + 300;
 
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
-        dragon = new MumuHuan(viewSizeWidth, viewSizeHeight);
+        cfg.useTextureView = true;
+        dragon = new SpineModelLocal("mimei2/mimei.atlas" ,"mimei2/mimei.json", viewSizeWidth, viewSizeHeight);
 //        dragonView = initializeForView(dragon, cfg);
-        dragonView = new SpineViewHelper(this.getApplication(), getWindowManager()).initializeForView(dragon, cfg);
-        dragonView.setBackgroundColor(0xFFFFFFFF);
-
-        if (dragonView instanceof SurfaceView) {
-            SurfaceView glView = (SurfaceView) dragonView;
-            glView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
-            glView.setZOrderOnTop(true);
-        }
+        dragonView = new SpineViewController(this.getApplication()).initializeForView(dragon, cfg);
+        flContainer.setBackgroundResource(R.mipmap.spine_bg);
+//        if (dragonView instanceof SurfaceView) {
+//            SurfaceView glView = (SurfaceView) dragonView;
+//            glView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
+//            glView.setZOrderOnTop(true);
+//        }
         addDragon();
     }
 
     public void addDragon() {
-        flContainer.addView(dragonView, new ViewGroup.LayoutParams(viewSizeWidth, viewSizeHeight));
+        flContainer.addView(dragonView, 0, new ViewGroup.LayoutParams(viewSizeWidth, viewSizeHeight));
     }
 
 
 
     public void onClick(View view) {
+        if(dragon == null){
+            return;
+        }
         if(view.getId() == R.id.button1){
-            indexSkins = (++indexSkins) % skins.length;
-            dragon.setSkin(skins[indexSkins]);
+            dragon.setSkin(dragon.getNextSkinName());
         }else  if(view.getId() == R.id.button2){
-            dragon.changeAnimation();
+            dragon.setAnimation(dragon.getNextAnimationName());
         }
 
     }

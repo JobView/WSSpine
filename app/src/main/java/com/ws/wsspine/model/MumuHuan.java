@@ -48,9 +48,9 @@ public class MumuHuan extends ApplicationAdapter {
     private float width;
     private float height;
 
-    private String defaultAnimation = "daiji";
+    private String defaultAnimation = "1daiji1";
 
-    String [] animations = new String[]{"kuajiao", "yaotou"};
+    String [] animations = new String[]{"1daiji", "3shengqi"};
     int indexAnimation = 0;
 
     public MumuHuan(float width, float height) {
@@ -69,16 +69,16 @@ public class MumuHuan extends ApplicationAdapter {
         debugRenderer.setRegionAttachments(false);
         debugRenderer.setMeshHull(false);
 
-        atlas = new TextureAtlas(Gdx.files.internal("mumu3/mumuzhayan.atlas"));
+        atlas = new TextureAtlas(Gdx.files.internal("mimei/mimei.atlas"));
         json = new SkeletonJson(atlas); // This loads skeleton JSON data, which is stateless.
         // Load the skeleton at 60% the size it was in Spine.
-        Pair<Float, Float> paintSize = readSkeletonSize(Gdx.files.internal("mumu3/mumuzhayan.json")); //只读取数据， 也可由外部传入
+        Pair<Float, Float> paintSize = readSkeletonSize(Gdx.files.internal("mimei/mimei.json")); //只读取数据， 也可由外部传入
         json.setScale(Math.min(this.width / paintSize.first, this.height / paintSize.second));
-        skeletonData = json.readSkeletonData(Gdx.files.internal("mumu3/mumuzhayan.json"));
+        skeletonData = json.readSkeletonData(Gdx.files.internal("mimei/mimei.json"));
 
         skeleton = new Skeleton(skeletonData); // Skeleton holds skeleton state (bone positions, slot attachments, etc).
         skeleton.setPosition(this.width / 2, (this.width / paintSize.first) > (this.height / paintSize.second)? 0 : (this.height - paintSize.second * json.getScale())  / 2);
-        skeleton.setAttachment("liuhai1", "liuhai1");
+//        skeleton.setAttachment("liuhai1", "liuhai1");
 
         bounds = new SkeletonBounds(); // Convenience class to do hit detection with bounding boxes.
 
@@ -92,7 +92,7 @@ public class MumuHuan extends ApplicationAdapter {
 
         addListener();
 
-        setSkin("loqun");
+        setSkin("2");
     }
 
     private void addListener() {

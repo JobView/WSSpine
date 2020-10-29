@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Debug;
 import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
@@ -47,10 +48,11 @@ public abstract class WSSpineBaseApplication implements AndroidApplicationBase {
 
     private WindowManager mWindowManager;
 
-    public WSSpineBaseApplication(Context context, WindowManager manager) {
+    public WSSpineBaseApplication(Context context) {
         this.mContext = context;
-        this.mWindowManager = manager;
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
     }
+
 
     @Override
     public void runOnUiThread(Runnable runnable) {
@@ -217,9 +219,9 @@ public abstract class WSSpineBaseApplication implements AndroidApplicationBase {
 
     @Override
     public WindowManager getWindowManager() {
-//        return mContext.getWindowManager();
         return mWindowManager;
     }
+
 
 
     public Window getApplicationWindow() {
@@ -240,6 +242,16 @@ public abstract class WSSpineBaseApplication implements AndroidApplicationBase {
 
     static {
         GdxNativesLoader.load();
+    }
+
+    public void release(){
+//        Gdx.app = null;
+//        Gdx.input = null;
+//        Gdx.audio = null;
+//        Gdx.files = null;
+//        Gdx.graphics = null;
+//        Gdx.net =null;
+        this.mWindowManager = null;
     }
 
 }

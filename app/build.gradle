@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.ws.wsspine"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -33,10 +33,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.android.support:appcompat-v7:29.+'
+//    api 'com.ws:library:+'
+//    api "com.ws.spine:javaLib:1.0.1-20201021.062200-7"
 
     implementation group: 'com.esotericsoftware.spine', name: 'spine-libgdx', version: '3.8.55.1'
     implementation group: 'com.badlogicgames.gdx', name: 'gdx', version: '1.9.10'
-    implementation group: 'com.badlogicgames.gdx', name: 'gdx-backend-android', version: '1.9.10'
+//    implementation group: 'com.badlogicgames.gdx', name: 'gdx-backend-android', version: '1.9.10'
 
     implementation "com.badlogicgames.gdx:gdx-platform:1.9.10:natives-armeabi"
 
