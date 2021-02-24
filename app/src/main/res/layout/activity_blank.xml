@@ -5,10 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/fl_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,22 +13,37 @@
         android:orientation="horizontal"
         android:layout_marginTop="300dp"
         android:layout_marginBottom="10dp">
+
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="切换装扮"
-            android:onClick="onClick"></Button>
+            android:onClick="onClick" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="切换动作"
-            android:onClick="onClick"></Button>
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="release"
+            android:onClick="onClick" />
     </LinearLayout>
 
-
+    <com.ws.wsspine.view.MFrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:background="#19000000" />
 
 </FrameLayout>

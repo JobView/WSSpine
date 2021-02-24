@@ -1,27 +1,20 @@
 package com.badlogic.gdx.backends.android;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Handler;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.LifecycleListener;
 import com.badlogic.gdx.backends.android.surfaceview.FillResolutionStrategy;
-import com.badlogic.gdx.backends.android.surfaceview.ResolutionStrategy;
-import com.badlogic.gdx.utils.Array;
-import com.esotericsoftware.spine.Animation;
-import com.esotericsoftware.spine.Skin;
-import com.ws.wsspine.model.SpineModelLocal;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.lang.reflect.Method;
 
 public class SpineViewController extends WSSpineBaseApplication {
-    public static Map<ApplicationListener, Graphics> Graphics = new HashMap();
+//    public static Map<SpineViewController, AndroidGraphics> Graphics = new HashMap();
 
 
     public SpineViewController(Context context){
@@ -34,37 +27,65 @@ public class SpineViewController extends WSSpineBaseApplication {
         return this.graphics.getView();
     }
 
-    private void init(ApplicationListener listener, AndroidApplicationConfiguration config) {
-        this.graphics = new AndroidGraphics(this, config, (ResolutionStrategy) (config.resolutionStrategy == null ? new FillResolutionStrategy() : config.resolutionStrategy));
-        Graphics.put(listener, this.graphics);
-        this.input = AndroidInputFactory.newAndroidInput(this, mContext, this.graphics.view, config);
-        this.audio = new AndroidAudio(mContext, config);
-        this.files = new AndroidFiles(mContext.getAssets(), mContext.getFilesDir().getAbsolutePath());
-        this.net = new AndroidNet(this, config);
+
+    private void init (ApplicationListener listener, AndroidApplicationConfiguration config) {
+        if (this.getVersion() < MINIMUM_SDK) {
+            throw new GdxRuntimeException("LibGDX requires Android API Level " + MINIMUM_SDK + " or later.");
+        }
+        setApplicationLogger(new AndroidApplicationLogger());
+        graphics = new AndroidGraphics(this, config, config.resolutionStrategy == null ? new FillResolutionStrategy()
+                : config.resolutionStrategy);
+        input = AndroidInputFactory.newAndroidInput(this, mContext, graphics.view, config);
+        audio = new AndroidAudio(mContext, config);
+        this.mContext.getFilesDir(); // workaround for Android bug #10515463
+        files = new AndroidFiles(mContext.getAssets(), mContext.getFilesDir().getAbsolutePath());
+        net = new AndroidNet(this, config);
         this.listener = listener;
         this.handler = new Handler();
         this.useImmersiveMode = config.useImmersiveMode;
         this.hideStatusBar = config.hideStatusBar;
-        this.addLifecycleListener(new LifecycleListener() {
-            public void resume() {
+        this.clipboard = new AndroidClipboard(mContext);
+
+        // Add a specialized audio lifecycle listener
+        addLifecycleListener(new LifecycleListener() {
+
+            @Override
+            public void resume () {
+                // No need to resume audio here
             }
 
-            public void pause() {
-                SpineViewController.this.audio.pause();
+            @Override
+            public void pause () {
+                audio.pause();
             }
 
-            public void dispose() {
-                SpineViewController.this.audio.dispose();
+            @Override
+            public void dispose () {
+                audio.dispose();
             }
         });
-            Gdx.app = this;
-            Gdx.input = this.input;
-            Gdx.audio = this.audio;
-            Gdx.files = this.files;
-            Gdx.graphics = this.graphics;
-            Gdx.net = this.net;
+
+        Gdx.app = this;
+        Gdx.input = this.getInput();
+        Gdx.audio = this.getAudio();
+        Gdx.files = this.getFiles();
+        Gdx.graphics = this.getGraphics();
+        Gdx.net = this.getNet();
+        useImmersiveMode(this.useImmersiveMode);
+        if (this.useImmersiveMode && getVersion() >= Build.VERSION_CODES.KITKAT) {
+            try {
+                Class<?> vlistener = Class.forName("com.badlogic.gdx.backends.android.AndroidVisibilityListener");
+                Object o = vlistener.newInstance();
+                Method method = vlistener.getDeclaredMethod("createListener", AndroidApplicationBase.class);
+                method.invoke(o, this);
+            } catch (Exception e) {
+                log("AndroidApplication", "Failed to create AndroidVisibilityListener", e);
+            }
+        }
 
     }
 
+    public void release() {
+        onDestroy();
+    }
 }
-

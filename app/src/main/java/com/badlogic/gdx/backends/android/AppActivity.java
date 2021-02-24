@@ -194,19 +194,19 @@ public class AppActivity extends AppCompatActivity implements AndroidApplication
     }
 
     protected void onPause() {
-//        boolean isContinuous = this.graphics.isContinuousRendering();
-//        boolean isContinuousEnforced = AndroidGraphics.enforceContinuousRendering;
-//        AndroidGraphics.enforceContinuousRendering = true;
-//        this.graphics.setContinuousRendering(true);
-//        this.graphics.pause();
-//        this.input.onPause();
-//        if (this.isFinishing()) {
-//            this.graphics.clearManagedCaches();
-//            this.graphics.destroy();
-//        }
-//        AndroidGraphics.enforceContinuousRendering = isContinuousEnforced;
-//        this.graphics.setContinuousRendering(isContinuous);
-//        this.graphics.onPauseGLSurfaceView();
+        boolean isContinuous = this.graphics.isContinuousRendering();
+        boolean isContinuousEnforced = AndroidGraphics.enforceContinuousRendering;
+        AndroidGraphics.enforceContinuousRendering = true;
+        this.graphics.setContinuousRendering(true);
+        this.graphics.pause();
+        this.input.onPause();
+        if (this.isFinishing()) {
+            this.graphics.clearManagedCaches();
+            this.graphics.destroy();
+        }
+        AndroidGraphics.enforceContinuousRendering = isContinuousEnforced;
+        this.graphics.setContinuousRendering(isContinuous);
+        this.graphics.onPauseGLSurfaceView();
         super.onPause();
     }
 

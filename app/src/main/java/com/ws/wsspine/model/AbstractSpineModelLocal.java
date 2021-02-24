@@ -72,7 +72,7 @@ public abstract class AbstractSpineModelLocal extends ApplicationAdapter {
     E_SpineFitMode fitMode;
 
     List<String> animationsNameList = new ArrayList<>();
-
+    static SkeletonData skeletonData;
 
 
     public AbstractSpineModelLocal(String atlasPath, String jsonPath, int parentW, int parentH, E_SpineFitMode mode) {
@@ -91,13 +91,19 @@ public abstract class AbstractSpineModelLocal extends ApplicationAdapter {
         debugRenderer = new SkeletonRendererDebug();
 
         atlas = new TextureAtlas(Gdx.files.internal(atlasPath));
-        SkeletonJson json = new SkeletonJson(atlas); // This loads skeleton JSON data, which is stateless.
-        Pair<Float, Float> paintSize = FileHandleUtils.readSkeletonSize(Gdx.files.internal(jsonPath)); //只读取数据， 也可由外部传入
-        json.setScale(fitMode.getScale(parentW, parentH, paintSize.getKey(), paintSize.getValue()));
+        SkeletonBinary json = new SkeletonBinary(atlas); // This loads skeleton JSON data, which is stateless.
+//      SkeletonJson json = new SkeletonJson(atlas); // This loads skeleton JSON data, which is stateless.
+//      Pair<Float, Float> paintSize = FileHandleUtils.readSkeletonSize(Gdx.files.absolute(jsonPath)); //只读取数据， 也可由外部传入
+//      float scale = fitMode.getScale(parentW, parentH, paintSize.getKey(), paintSize.getValue());
+//      json.setScale(scale);
 
-        SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(jsonPath));
+        if(skeletonData == null){
+            skeletonData = json.readSkeletonData(Gdx.files.internal(jsonPath));
+        }
+        float scale = fitMode.getScale(parentW, parentH, skeletonData.getWidth(), skeletonData.getHeight());
         skeleton = new Skeleton(skeletonData); // Skeleton holds skeleton state (bone positions, slot attachments, etc).
-        float[] position = fitMode.getPosition(parentW, parentH, paintSize.getKey(), paintSize.getValue());
+        skeleton.setScale(scale, scale);
+        float[] position = fitMode.getPosition(parentW, parentH, skeletonData.getWidth(), skeletonData.getHeight());
         skeleton.setPosition(position[0], position[1]);
         bounds = new SkeletonBounds(); // Convenience class to do hit detection with bounding boxes.
         AnimationStateData stateData = new AnimationStateData(skeletonData); // Defines mixing (crossfading) between animations.
@@ -116,16 +122,16 @@ public abstract class AbstractSpineModelLocal extends ApplicationAdapter {
     long startTime;
     public void render () {
 
-        if (TimeUtils.nanoTime() - startTime > 1000000000) /* 1,000,000,000ns == one second */{
-            startTime = TimeUtils.nanoTime();
-            Log.i("FPSLogger", "fps:" + SpineViewController.Graphics.get(this).getFramesPerSecond());
-        }
+//        if (TimeUtils.nanoTime() - startTime > 1000000000) /* 1,000,000,000ns == one second */{
+//            startTime = TimeUtils.nanoTime();
+//            Log.i("FPSLogger", "fps:" + SpineViewController.Graphics.get(this).getFramesPerSecond());
+//        }
 
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 //        animationState.update(Gdx.graphics.getDeltaTime()); // Update the animation time.
 
-        animationState.update(SpineViewController.Graphics.get(this).getDeltaTime()); // Update the animation time.
+        animationState.update(Gdx.graphics.getDeltaTime()); // Update the animation time.
 
 
 
@@ -152,7 +158,7 @@ public abstract class AbstractSpineModelLocal extends ApplicationAdapter {
     }
 
     public void dispose () {
-        atlas.dispose();
+//        atlas.dispose();
     }
 
     public void setLoadListener(SpineLoadListener loadListener) {

@@ -20,6 +20,7 @@ public class ShowSpineDialog extends Dialog {
     }
      SpineModelLocal dragon;
      View dragonView;
+    SpineViewController controller;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +43,16 @@ public class ShowSpineDialog extends Dialog {
         cfg.useTextureView = true;
 //       dragon = new SpineModelLocal("spineboy/spineboy-pma.atlas" ,"spineboy/spineboy-ess.json", viewSizeWidth, viewSizeHeight);
          dragon = new SpineModelLocal("mimei2/mimei.atlas" ,"mimei2/mimei.json", viewSizeWidth, viewSizeHeight);
-         dragonView = new SpineViewController(this.getContext()).initializeForView(dragon, cfg);
+         controller = new SpineViewController(this.getContext());
+        dragonView = controller.initializeForView(dragon, cfg);
         parent.addView(dragonView,  new ViewGroup.LayoutParams(viewSizeWidth, viewSizeHeight));
     }
 
+    @Override
+    public void dismiss() {
+        if (controller != null) {
+            controller.release();
+        }
+        super.dismiss();
+    }
 }

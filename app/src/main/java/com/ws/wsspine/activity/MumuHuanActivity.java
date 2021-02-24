@@ -25,6 +25,8 @@ public class MumuHuanActivity extends AppCompatActivity {
     int viewSizeHeight;
     int viewSizeWidth;
 
+    SpineViewController controller;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +40,10 @@ public class MumuHuanActivity extends AppCompatActivity {
         cfg.useTextureView = true;
         dragon = new SpineModelLocal("mimei2/mimei.atlas" ,"mimei2/mimei.json", viewSizeWidth, viewSizeHeight);
 //        dragonView = initializeForView(dragon, cfg);
-        dragonView = new SpineViewController(this.getApplication()).initializeForView(dragon, cfg);
-        flContainer.setBackgroundResource(R.mipmap.spine_bg);
+        controller = new SpineViewController(this.getApplication());
+        dragonView = controller.initializeForView(dragon, cfg);
+//        dragonView.setBackgroundColor(0xFF0000ff);
+//        flContainer.setBackgroundResource(R.mipmap.spine_bg);
 //        if (dragonView instanceof SurfaceView) {
 //            SurfaceView glView = (SurfaceView) dragonView;
 //            glView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
@@ -50,6 +54,8 @@ public class MumuHuanActivity extends AppCompatActivity {
 
     public void addDragon() {
         flContainer.addView(dragonView, 0, new ViewGroup.LayoutParams(viewSizeWidth, viewSizeHeight));
+//        dragonView.setScaleX(0.5f);
+//        dragonView.setScaleY(0.5f);
     }
 
 
@@ -62,6 +68,8 @@ public class MumuHuanActivity extends AppCompatActivity {
             dragon.setSkin(dragon.getNextSkinName());
         }else  if(view.getId() == R.id.button2){
             dragon.setAnimation(dragon.getNextAnimationName());
+        }else if(view.getId() == R.id.button3){
+            controller.release();
         }
 
     }
@@ -78,5 +86,20 @@ public class MumuHuanActivity extends AppCompatActivity {
         wm.getDefaultDisplay().getMetrics(outMetrics);
         return  outMetrics.widthPixels;
     }
+
+    @Override
+    protected void onPause() {
+        if (controller != null) {
+            controller.release();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+    }
+
 
 }

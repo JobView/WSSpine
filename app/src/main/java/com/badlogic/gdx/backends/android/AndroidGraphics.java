@@ -385,6 +385,7 @@ public class AndroidGraphics implements Graphics, Renderer, com.badlogic.gdx.bac
 
 				while(this.pause) {
 					try {
+						Gdx.app.error("AndroidGraphics", "pause()" + this.pause);
 						this.synch.wait(4000L);
 						if (this.pause) {
 							Gdx.app.error("AndroidGraphics", "waiting for pause synchronization took too long; assuming deadlock and killing");
@@ -437,7 +438,7 @@ public class AndroidGraphics implements Graphics, Renderer, com.badlogic.gdx.bac
 			if (this.resume) {
 				this.resume = false;
 			}
-
+			Gdx.app.error("AndroidGraphics", "pause");
 			if (this.pause) {
 				this.pause = false;
 				this.synch.notifyAll();
