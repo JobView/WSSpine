@@ -15,17 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="mumuhuan"/>
+        android:text="换肤，动作"/>
 
-    <Button
-        android:id="@+id/button_spinebody"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="spinebody"/>
 
     <Button
         android:id="@+id/button_multiple"
@@ -35,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="multiple"/>
+        android:text="多个加载"/>
     <Button
         android:id="@+id/button_dialog"
         android:layout_width="match_parent"
@@ -44,6 +35,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="spine_dialog"/>
+        android:text="弹窗形式"/>
 
 </LinearLayout>

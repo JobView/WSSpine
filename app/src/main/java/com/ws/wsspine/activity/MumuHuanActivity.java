@@ -32,30 +32,20 @@ public class MumuHuanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blank);
         flContainer = findViewById(R.id.fl_container);
-        viewSizeWidth = getScreenWidth();
-        viewSizeHeight = getScreenWidth() + 300;
+        viewSizeWidth = getScreenWidth()  - 300;
+        viewSizeHeight = viewSizeWidth + 300;
 
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.r = cfg.g = cfg.b = cfg.a = 8;
         cfg.useTextureView = true;
         dragon = new SpineModelLocal("mimei2/mimei.atlas" ,"mimei2/mimei.json", viewSizeWidth, viewSizeHeight);
-//        dragonView = initializeForView(dragon, cfg);
         controller = new SpineViewController(this.getApplication());
         dragonView = controller.initializeForView(dragon, cfg);
-//        dragonView.setBackgroundColor(0xFF0000ff);
-//        flContainer.setBackgroundResource(R.mipmap.spine_bg);
-//        if (dragonView instanceof SurfaceView) {
-//            SurfaceView glView = (SurfaceView) dragonView;
-//            glView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
-//            glView.setZOrderOnTop(true);
-//        }
         addDragon();
     }
 
     public void addDragon() {
         flContainer.addView(dragonView, 0, new ViewGroup.LayoutParams(viewSizeWidth, viewSizeHeight));
-//        dragonView.setScaleX(0.5f);
-//        dragonView.setScaleY(0.5f);
     }
 
 

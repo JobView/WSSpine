@@ -22,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
        if(view.getId() == R.id.button_mumuhuan){
             startActivity(new Intent(this, MumuHuanActivity.class));
-        }else  if(view.getId() == R.id.button_spinebody){
-           startActivity(new Intent(this, SpinebodyActivity.class));
-       }else  if(view.getId() == R.id.button_multiple){
+        }else  if(view.getId() == R.id.button_multiple){
            startActivity(new Intent(this, MultipleSpineActivity.class));
        }else  if(view.getId() == R.id.button_dialog){
            new ShowSpineDialog(this).show();

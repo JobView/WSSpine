@@ -14,7 +14,6 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import java.lang.reflect.Method;
 
 public class SpineViewController extends WSSpineBaseApplication {
-//    public static Map<SpineViewController, AndroidGraphics> Graphics = new HashMap();
 
 
     public SpineViewController(Context context){
